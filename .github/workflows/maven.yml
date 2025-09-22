@@ -29,6 +29,9 @@ jobs:
         cache: maven
         
     - name: Build & Test (with coverage)
+      env:
+        JWT_SECRET: ${{ secrets.JWT_SECRET }}
+        JWT_EXPIRY: ${{ secrets.JWT_EXPIRY }}
       run: mvn clean verify
     - name: Enforce coverage ≥ 80%
       run: |
