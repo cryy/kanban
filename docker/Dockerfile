@@ -1,4 +1,4 @@
-﻿FROM openjdk:21-slim as builder
+﻿FROM openjdk:21-slim AS builder
 WORKDIR /app
 COPY pom.xml .
 COPY src ./src
